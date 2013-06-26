@@ -20,6 +20,7 @@ Version: 1.2.3
 	3. Featured Section
 	4. Main Section
 		4.1. News
+		4.1.1 News mini
 		4.2. Videos
 		4.3. Updates
 	5. Sidebar
@@ -51,10 +52,12 @@ Version: 1.2.3
 		10.9. Columns
 		10.10. Game Info Box
 	11. Search page
+	12. otros
+	13. 1responsive design
 	=================
 ***/
 
-/***     1. General Styles     ***/
+/***     Respo. General Styles     ***/
 body { background-image: url(images/fondo.png); font: 12px Arial, sans-serif; color: #3a3a3a; }
 #e3{ background: url(images/fondo2.png)}
 a { color:#006acd; text-decoration:none; }
@@ -150,6 +153,26 @@ a:hover { text-decoration:underline; }
 	.news-item p { line-height:18px; }
 	.news-heading { font-size:24px; font-family:BebasNeueRegular; margin-bottom:16px; }
 	.news-heading a { color:#000; }
+
+		/*     4.1.1 News Mini    */
+
+	#news-wrapper-mini { margin-bottom:24px; }
+	.news-item-mini { border-bottom:1px solid #DDD; margin-bottom:30px; padding-bottom:25px; }
+	.news-thumb-wrapper-mini { position:relative; min-width: 300px;}
+	.news-thumb-wrapper-mini a img{ margin-top:44px; width: 300px; height: 150px; float: left; margin: 0 5px 5px 0;}
+	.news-thumb-wrapper-mini h1 { position:absolute; color:#000; padding:8px 9px 7px 9px; font-size:24px; font-family:BebasNeueRegular; }
+	.news-thumb-wrapper-mini h1 a { color:#000; }
+	.news-thumb-wrapper-mini h1 a:hover{ color:#c1ff2c; text-decoration:none; }
+	.news-arrows-mini { position:absolute; left:0;  height:44px; width:40px; background:url(images/news-arrows.png) no-repeat; }
+	.news-meta-wrapper-mini { background:url(images/section-title.png) repeat; height:25px; border-bottom:1px solid #CCC; margin-top:-3px; padding:9px 9px 0 9px; margin-bottom:12px; clear: both;}
+	.news-meta-wrapper-mini span { text-shadow: 1px 1px 1px #FFF; font-weight:bold; text-transform: uppercase; letter-spacing:1px; }
+	.news-meta-mini { color:#777; float:left; }
+	.news-cats-mini { float:right; }
+	.news-comment-mini { float:right; margin-left:15px; padding:0 0 0 18px; background:url(images/comment.png) no-repeat left; }
+	.news-item-mini p { line-height:18px; }
+	.news-heading-mini { font-size:24px; font-family:BebasNeueRegular; margin-bottom:16px; }
+	.news-heading-mini a { color:#000; } 
+	.titulo{min-height: 44px;}
 
 /***     5. Sidebar     ***/
 #sidebar { width:300px; float:right; }
@@ -468,30 +491,12 @@ a:hover { text-decoration:underline; }
 .search-item .search-date a { color:#888; }
 .search-text { line-height:18px; }
 
+/*    12.  Arrow category e3    */
 
 .news-arrowse3 { position:absolute; left:0; top:220px; height:44px; width:40px; background:url(images/news-arrowse3.png) no-repeat; }
 
-	/*     4.1. News MIni    */
 
-	#news-wrapper-mini { margin-bottom:24px; }
-	.news-item-mini { border-bottom:1px solid #DDD; margin-bottom:30px; padding-bottom:25px; }
-	.news-thumb-wrapper-mini { position:relative; min-width: 300px;}
-	.news-thumb-wrapper-mini a img{ margin-top:44px; width: 300px; height: 150px; float: left; margin: 0 5px 5px 0;}
-	.news-thumb-wrapper-mini h1 { position:absolute; color:#000; padding:8px 9px 7px 9px; font-size:24px; font-family:BebasNeueRegular; }
-	.news-thumb-wrapper-mini h1 a { color:#000; }
-	.news-thumb-wrapper-mini h1 a:hover{ color:#c1ff2c; text-decoration:none; }
-	.news-arrows-mini { position:absolute; left:0;  height:44px; width:40px; background:url(images/news-arrows.png) no-repeat; }
-	.news-meta-wrapper-mini { background:url(images/section-title.png) repeat; height:25px; border-bottom:1px solid #CCC; margin-top:-3px; padding:9px 9px 0 9px; margin-bottom:12px; clear: both;}
-	.news-meta-wrapper-mini span { text-shadow: 1px 1px 1px #FFF; font-weight:bold; text-transform: uppercase; letter-spacing:1px; }
-	.news-meta-mini { color:#777; float:left; }
-	.news-cats-mini { float:right; }
-	.news-comment-mini { float:right; margin-left:15px; padding:0 0 0 18px; background:url(images/comment.png) no-repeat left; }
-	.news-item-mini p { line-height:18px; }
-	.news-heading-mini { font-size:24px; font-family:BebasNeueRegular; margin-bottom:16px; }
-	.news-heading-mini a { color:#000; } 
-	.titulo{min-height: 44px;}
-
-
+/*    13.  responsive design    */
 
 @media screen and (max-width:1050px){
 	#main-wrapper { width: 96%;padding: 19px;}
@@ -501,28 +506,23 @@ a:hover { text-decoration:underline; }
 	#social-media {float: left;}	
 	#back-top{width: 70px;float:left;margin-left: 10px;}
 }
-
-
-@media screen and (max-width:960px){
-	#main-wrapper { width:calc(95% - 10px);}
-	#main {width:65%; }
-	#sidebar{width: 30%;}
-	.news-thumb-wrapper a img{  width:100%; height:3%;}
-	#search{display: none;}
-	.widget-title {width: 200px;}
-	#footer {margin-left: 20%;}
-	.footer-widget.middle{display: none;}	
-	.footer-widget.right{float: left;}	
-	#footer{width: 100%;}
-	#footer-bottom {width: 100%;}
-	#footer-bottom-wrapper{width: auto;}
-	#footer-top{width: 98%;}
-	#header{width: 98%;}
-	#navigation-wrapper{width: 98%;}
-}
-
-
-
+	@media screen and (max-width:960px){
+		#main-wrapper { width:calc(95% - 10px);}
+		#main {width:65%; }
+		#sidebar{width: 30%;}
+		.news-thumb-wrapper a img{  width:100%; height:3%;}
+		#search{display: none;}
+		.widget-title {width: 200px;}
+		#footer {margin-left: 20%;}
+		.footer-widget.middle{display: none;}	
+		.footer-widget.right{float: left;}	
+		#footer{width: 100%;}
+		#footer-bottom {width: 100%;}
+		#footer-bottom-wrapper{width: auto;}
+		#footer-top{width: 98%;}
+		#header{width: 98%;}
+		#navigation-wrapper{width: 98%;}
+	}
 
 @media screen and (max-width:750px){
 	#main { width:65%; }		
@@ -541,15 +541,14 @@ a:hover { text-decoration:underline; }
 	.post-entry p iframe{width: 100%;}
 	.post-entry p img{max-width: 100%;}
 }
-@media screen and (max-width:650px){
-	
-	#main-wrapper { width: 90%;}
-	#main{ width:100%;}
-	#sidebar{display: none;}
-	#header-wrapper {background-color: #474747;height: 250px;}
-	#footer-navigation{display: none;}
-	#back-top{margin: 0 40%;}
-}
+	@media screen and (max-width:650px){	
+		#main-wrapper { width: 90%;}
+		#main{ width:100%;}
+		#sidebar{display: none;}
+		#header-wrapper {background-color: #474747;height: 250px;}
+		#footer-navigation{display: none;}
+		#back-top{margin: 0 40%;}
+	}
 @media screen and (max-width:500px){	
 	.footer-widget.right{margin:0 auto; float: none; }	
 	.footer-widget.left{display: none;}	
