@@ -1,0 +1,1 @@
+Cufon.replace('#featured h2, .post h2, .sidebar h3');
