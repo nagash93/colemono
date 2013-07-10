@@ -70,15 +70,22 @@
 			<ul id="top-navigation">
 				<?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'top-menu' ) ); ?>
 			</ul>
-			<!-- END TOP NAVIGATION -->
+			<!-- END TOP NAVIGATION -->	
 			
+
 			<!-- BEGIN SOCIAL MEDIA -->
 			<div id="social-media">
+
 				<?php if(get_option('lp_disable_facebook') == 'false') { ?><a href="http://www.facebook.com/<?php echo get_option('lp_facebook'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="Facebook" /></a><?php } ?>
 				<?php if(get_option('lp_disable_twitter') == 'false') { ?><a href="http://www.twitter.com/<?php echo get_option('lp_twitter'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="Twitter" /></a><?php } ?>
 				<a href="<?php bloginfo('rss2_url'); ?>" title="Subscribe to our feed"><img src="<?php echo get_template_directory_uri(); ?>/images/rss.png" alt="RSS" /></a>
 			</div>
 			<!-- END SOCIAL MEDIA -->
+			<!-- BEGIN SEARCH -->
+				<div id="search">
+					<?php get_search_form(); ?>
+				</div>
+				<!-- END SEARCH -->
 			
 			<!-- BEGIN LOGO -->
 			<div id="logo">
@@ -107,11 +114,7 @@
 				</ul>
 				<!-- END NAVIGATION -->
 				
-				<!-- BEGIN SEARCH -->
-				<div id="search">
-					<?php get_search_form(); ?>
-				</div>
-				<!-- END SEARCH -->
+				
 				
 			</div>
 			<!-- END NAVIGATION-WRAPPER -->
