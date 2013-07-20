@@ -1,27 +1,46 @@
 <?php
-/**
- * Front to the WordPress application. This file doesn't do anything, but loads
- * wp-blog-header.php which does and tells WordPress to load the theme.
- *
- * @package WordPress
- */
 
 /**
- * Tells WordPress to load the WordPress theme and output it.
+
+ * Front to the WordPress application. This file doesn't do anything, but loads
+
+ * wp-blog-header.php which does and tells WordPress to load the theme.
+
  *
- * @var bool
+
+ * @package WordPress
+
  */
+
+
+
+/**
+
+ * Tells WordPress to load the WordPress theme and output it.
+
+ *
+
+ * @var bool
+
+ */
+
+
+
 
 
 /** Loads the WordPress Environment and Template */
+
 require('../wp-blog-header.php');
+
  ?>
+
  <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 
 <head>
 
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="En Colemono encontrarás noticias de videojuegos, reviews, programas en vivo, podcast, radio, notas y más!"/>
     <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
 	<link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
@@ -34,7 +53,7 @@ require('../wp-blog-header.php');
 	<?php if(get_option('lp_custom_favicon')) { ?><link rel="shortcut icon" href="<?php echo get_option('lp_custom_favicon'); ?>" /><?php } ?>	
 	<!-- BEGIN STYLESHEETS -->
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
-	<link rel="stylesheet" href="../wp-content/themes/leetpress/styletv.css" type="text/css"  />
+	<link rel="stylesheet" href="../../wp-content/themes/leetpress/styletv.css" type="text/css"  />
 	<?php $theme_color = get_option('lp_theme_color'); leetpress_theme_color($theme_color); ?>
 	
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
@@ -76,7 +95,7 @@ require('../wp-blog-header.php');
 	<?php wp_head(); ?>
 	
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> <?php if((in_category('E3 2013')&is_singular())||is_category('E3 2013')){  echo  'id="e3"';}?>>
 
 	<!-- BEGIN HEADER WRAPPER -->
 	<div id="header-wrapper">
@@ -88,15 +107,22 @@ require('../wp-blog-header.php');
 			<ul id="top-navigation">
 				<?php wp_nav_menu( array( 'container' => false, 'theme_location' => 'top-menu' ) ); ?>
 			</ul>
-			<!-- END TOP NAVIGATION -->
+			<!-- END TOP NAVIGATION -->	
 			
+
 			<!-- BEGIN SOCIAL MEDIA -->
 			<div id="social-media">
+
 				<?php if(get_option('lp_disable_facebook') == 'false') { ?><a href="http://www.facebook.com/<?php echo get_option('lp_facebook'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png" alt="Facebook" /></a><?php } ?>
 				<?php if(get_option('lp_disable_twitter') == 'false') { ?><a href="http://www.twitter.com/<?php echo get_option('lp_twitter'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png" alt="Twitter" /></a><?php } ?>
 				<a href="<?php bloginfo('rss2_url'); ?>" title="Subscribe to our feed"><img src="<?php echo get_template_directory_uri(); ?>/images/rss.png" alt="RSS" /></a>
 			</div>
 			<!-- END SOCIAL MEDIA -->
+			<!-- BEGIN SEARCH -->
+				<div id="search">
+					<?php get_search_form(); ?>
+				</div>
+				<!-- END SEARCH -->
 			
 			<!-- BEGIN LOGO -->
 			<div id="logo">
@@ -125,11 +151,7 @@ require('../wp-blog-header.php');
 				</ul>
 				<!-- END NAVIGATION -->
 				
-				<!-- BEGIN SEARCH -->
-				<div id="search">
-					<?php get_search_form(); ?>
-				</div>
-				<!-- END SEARCH -->
+				
 				
 			</div>
 			<!-- END NAVIGATION-WRAPPER -->
@@ -140,32 +162,73 @@ require('../wp-blog-header.php');
 	</div>
 	<!-- END HEADER-WRAPPER -->
 
+
 	<!-- BEGIN MAIN WRAPPER -->
+
 	<div id="main-wrapper">
+
 	
+
 		<!-- BEGIN MAIN -->
+
 		<div id="main">
-		
-		<div id="stream">
-			<img src="../wp-content/themes/leetpress/images/colemonotv.png">
-		<object type="application/x-shockwave-flash" height="378" width="620" id="live_embed_player_flash" data="http://es.twitch.tv/widgets/live_embed_player.swf?channel=colemonotv" bgcolor="#000000"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="movie" value="http://es.twitch.tv/widgets/live_embed_player.swf" /><param name="flashvars" value="hostname=es.twitch.tv&channel=colemonotv&auto_play=true&start_volume=25" /></object>
+
+				<div id="banner">
+
+					<img src="../wp-content/themes/leetpress/images/logo-colemono.png">
+
+				</div>
+
+				<div id="cont">
+
+				<div id="twitch" onclick="location.href='http://colemono.com/tv/1';" ></div>
 
 
-	</div>
 
-	<div id="chat">
-		<img src="../wp-content/themes/leetpress/images/chatea.png">
-		<iframe frameborder="0" scrolling="no" id="chat_embed" src="http://twitch.tv/chat/embed?channel=colemonotv&amp;popout_chat=true" height="500" width="315"></iframe>
-	</div>
+				<div id="ustream" onclick="location.href='http://colemono.com/tv/2';" ></div>
+
+				</div>
 
 
+
+
+
+				<?php 
+
+			
+
+				 query_posts("cat=31&showposts=-1");
+
+				if (have_posts()) : while (have_posts()) : the_post() ?>
+
+				
+
+			<!-- BEGIN POST -->
+
+			<div id="post">
+
+							
+
+		<?php include( TEMPLATEPATH . '/includes/show-posts.php' ); ?>
+
+			</div>
+
+			<!-- EMD POST -->
+
+			<?php  endwhile; endif; ?>
 
 
 
 			
+
 		</div>
+
 		<!-- END MAIN -->
 
+
+
 </div>
+
+
 
 <?php get_footer(); ?>

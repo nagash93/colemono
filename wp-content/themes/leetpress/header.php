@@ -58,7 +58,7 @@
 	<?php wp_head(); ?>
 	
 </head>
-<body <?php body_class(); ?> <?php if((in_category('E3 2013')&is_singular())||is_category('E3 2013')){  echo  'id="e3"';}?>>
+<body <?php body_class(); ?> <?php if((in_category('E3 2013')&is_singular())||is_category('E3 2013')){  echo  'id="e3"';}?><?php if((in_category('FestiGame 2013')&is_singular())||is_category('FestiGame 2013')){  echo  'id="festigame"';}?>>
 
 	<!-- BEGIN HEADER WRAPPER -->
 	<div id="header-wrapper">

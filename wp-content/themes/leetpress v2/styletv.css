@@ -1,0 +1,58 @@
+body{
+	background-image: url(images/fondotv.png); font: 12px Arial, sans-serif; color: #3a3a3a;
+}
+#main{
+	width: 1000px;
+
+}
+#main-wrapper{
+
+	background-color: transparent;
+}
+#stream{
+	float: left;
+	width: 620px;
+	
+}
+
+#chat{
+	float: left;
+	width: 320px;
+	
+}
+#banner{
+	margin: 0 auto;
+	width: 443px;
+}
+#cont{
+	margin: 100px auto;
+	width: 800px;
+	margin-bottom: 285px;
+}
+#twitch{
+	float: left;
+	width: 394px;
+	height: 100px;
+	cursor:pointer;
+	background-image: url(images/twitch.png);
+}
+#ustream{
+	float: left;
+	width: 400px;
+	height: 100px;
+	cursor:pointer;
+	background-image: url(images/ustream.png);
+
+}
+#twitch:hover{
+background-image: url(images/twitch2.png);
+}
+#ustream:hover{
+background-image: url(images/ustream2.png);
+
+}
+#post{
+	clear: both;
+	width: 600px;
+	margin: 0 auto;
+}
