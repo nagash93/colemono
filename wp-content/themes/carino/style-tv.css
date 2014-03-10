@@ -1,0 +1,81 @@
+
+
+#main-content{
+
+	background-color: #fff;
+	
+	padding: 5px;
+    width: 930px;
+}
+#stream{
+	float: left;
+	width: 620px;
+	
+}
+
+#chat{
+	float: left;
+	width: 310px;
+	
+}
+#banner{
+	margin: 0 auto;
+	width: 443px;
+}
+#cont{
+	margin: 100px auto;
+	width: 800px;
+	margin-bottom: 285px;
+}
+#twitch{
+	float: left;
+	width: 394px;
+	height: 100px;
+	cursor:pointer;
+	background-image: url(images/twitch.png);
+}
+#ustream{
+	float: left;
+	width: 400px;
+	height: 100px;
+	cursor:pointer;
+	background-image: url(images/ustream.png);
+
+}
+#twitch:hover{
+background-image: url(images/twitch2.png);
+}
+#ustream:hover{
+background-image: url(images/ustream2.png);
+
+}
+#post{
+	clear: both;
+	width: 600px;
+	margin: 0 auto;
+}
+
+#compartir{
+	
+	background-color: #D2D2D2;
+	overflow: auto;
+	margin-bottom: 10px;
+  
+}
+#compartir img {
+
+
+    margin:  15px 0 10px 20px;
+
+
+
+}
+#botones{
+	 
+   float: right;
+   margin-right: 10%;
+    padding-top: 16px;
+}
+#botones iframe{
+	width: 70px;
+}

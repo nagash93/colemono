@@ -59,4 +59,4 @@ global $data, $sitepress;
 
 </footer>	<?php wp_footer();  ?>
 </body>
-</html><a href="http://www.wplocker.com">shared on wplocker.com</a>
+</html>

@@ -1581,7 +1581,7 @@ if ( !function_exists( 'get_avatar' ) ) :
  * @param string $alt Alternative text to use in image tag. Defaults to blank
  * @return string <img> tag for the user's avatar
 */
-function get_avatar( $id_or_email, $size = '96', $default = '', $alt = false ) {
+function get_avatar( $id_or_email, $size = '96', $default = 'http://colemono.com/wp-content/uploads/2014/02/avatar-twitter.png', $alt = false ) {
 	if ( ! get_option('show_avatars') )
 		return false;
 

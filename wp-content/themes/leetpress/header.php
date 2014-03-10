@@ -24,12 +24,16 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		
 	<!-- BEGIN JS -->
+	
+
+
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/superfish.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.fancybox-1.3.4.pack.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.scrollTo.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.tools.min.js"></script>
+
 	
 	<?php if ( is_home() ) { ?>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mobilyslider.js"></script>
@@ -54,11 +58,14 @@
 	</script>
 	<?php } ?>
 	
-	
+
+
+
+
 	<?php wp_head(); ?>
 	
 </head>
-<body <?php body_class(); ?> <?php if((in_category('E3 2013')&is_singular())||is_category('E3 2013')){  echo  'id="e3"';}?><?php if((in_category('FestiGame 2013')&is_singular())||is_category('FestiGame 2013')){  echo  'id="festigame"';}?>>
+<body <?php body_class(); ?> <?php if((in_category('FestiGame 2013')&is_singular())||is_category('FestiGame 2013')){  echo  'id="festigame"';}?>>
 
 	<!-- BEGIN HEADER WRAPPER -->
 	<div id="header-wrapper">
@@ -106,7 +113,7 @@
 			<?php } ?>
 			
 			<!-- BEGIN NAVIGATION-WRAPPER -->
-			<div id="navigation-wrapper">
+			<div class="navigation-wrapper">
 			
 				<!-- BEGIN NAVIGATION -->
 				<ul id="navigation">
@@ -124,3 +131,6 @@
 	
 	</div>
 	<!-- END HEADER-WRAPPER -->
+
+	
+

@@ -1,0 +1,85 @@
+Uso de los comandos:
+
+/nick : Cambia tu nickname en el servidor.
+/fix  : Repara tu item que tienes en mano.
+/tpahere: Envias una solicitud para que alguien vaya hacia ti.
+/afk  : Te pone ausente.
+/hat  : Usas de sombrero el bloque que tengas en tu mano.
+/enderchest: Puedes usar tu enderchest donde sea que estes.
+/feed : Te alimenta al 100%
+/sell : Te vende el item que selecciones. Puedes vender lo que tengas en la mano o inventario entero.
+/near : Te dice que jugador esta cerca tuyo.
+/bc   : (/broadcast) Envias un mensaje masivo a todo el servidor.
+/heal : Te regenera toda la vida. El uso de este comando tiene un costo de 1.000.
+/wb   : (/workbench) Puedes abrir una mesa de crafteo donde quiera que estes.
+/invsee: Ves el inventario de otro jugador. (No tengan miedo, solo lo podrán ver, no sacar cosas de el)
+/top : Te lleva al bloque mas que se encuentre arriba tuyo.
+
+VIP:
+comando /nick
+comando /fix
+comando /tpahere
+comando /afk
+comando /hat
+comando /enderchest
+4 Sethome
+50.000 Dinero
+1 Kit de diamante proteccion III
+1 Espada filo III
+1 Stack de diamantes
+15 Manzanas encantadas
+2 pico de diamante irrompible 4 eficiencia 4
+2 Libros encantados: Fortuna III, Toque de seda I
+5 Boost de power de faction para el jugador
+16 Posiones de fuerza II (Stackeadas)
+3 Stack de botellas de XP
+-Acceso a tienda VIP-
+
+VIP+:
+Todos los comandos VIP.
+A demas de:
+comando /feed
+comando /sell
+comando /near
+comando /broadcast
+Escribir con colores en el chat.
+Mantiene inventario al morir.
+2 Kit de diamante proteccion IV
+2 Espadas filo IV
+32 Manzanas encantadas
+4 Picos de diamante Irrompible 3, eficiencia 4
+4 Libros encantados: 2 Fortuna III, 2 Toque de seda I
+100.000 En dinero
+6 Sethome
+10 Boost de power de faction para el jugador
+32 Pociones de fuerza II (Stackeadas)
+6 Stacks de botellas de XP
+-Acceso a tienda VIP-
+
+Elite:
+Todos los comandos VIP y VIP+
+Mantiene inventario al morir.
+Escribir con colores en el chat.
+A demas de:
+comando /heal (Costo de 1.000 por uso)
+comando /workbench
+comando /invsee
+comando /top
+4 Stack de diamantes
+4 Kits de diamante Proteccion 4 
+4 Espadas filo V
+6 Picos de diamante FULL encantados. (3 Con fortuna III, 3 con Toque de seda I)
+6 Libros encantados a eleccion.
+64 Manzanas encantadas
+200.000 dinero
+8 sethome
+1 Stack de pociones de fuerza II
+15 Boost de power de faction para el jugador
+10 Stacks de botellas de XP
+-Acceso a tienda ELITE-
+
+Compra del vip:
+- 24/12 - Downkill889
+
+
+

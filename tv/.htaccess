@@ -1,0 +1,86 @@
+# Use PHP5.4 as default
+AddHandler application/x-httpd-php54 .php
+
+# BEGIN WPSuperCache
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+#If you serve pages from behind a proxy you may want to change 'RewriteCond %{HTTPS} on' to something more sensible
+AddDefaultCharset UTF-8
+RewriteCond %{REQUEST_URI} !^.*[^/]$
+RewriteCond %{REQUEST_URI} !^.*//.*$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} !.*=.*
+RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
+RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{HTTPS} on
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html.gz -f
+RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html.gz" [L]
+
+RewriteCond %{REQUEST_URI} !^.*[^/]$
+RewriteCond %{REQUEST_URI} !^.*//.*$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} !.*=.*
+RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
+RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{HTTPS} !on
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html.gz -f
+RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html.gz" [L]
+
+RewriteCond %{REQUEST_URI} !^.*[^/]$
+RewriteCond %{REQUEST_URI} !^.*//.*$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} !.*=.*
+RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
+RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTPS} on
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html -f
+RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index-https.html" [L]
+
+RewriteCond %{REQUEST_URI} !^.*[^/]$
+RewriteCond %{REQUEST_URI} !^.*//.*$
+RewriteCond %{REQUEST_METHOD} !POST
+RewriteCond %{QUERY_STRING} !.*=.*
+RewriteCond %{HTTP:Cookie} !^.*(comment_author_|wordpress_logged_in|wp-postpass_).*$
+RewriteCond %{HTTP:X-Wap-Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTP:Profile} !^[a-z0-9\"]+ [NC]
+RewriteCond %{HTTPS} !on
+RewriteCond %{DOCUMENT_ROOT}/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html -f
+RewriteRule ^(.*) "/wp-content/cache/supercache/%{SERVER_NAME}/$1/index.html" [L]
+</IfModule>
+
+# END WPSuperCache
+
+
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+# EXPIRAR CACHE
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 10 days"
+ExpiresByType text/css "access plus 3 days"
+ExpiresByType text/plain "access plus 1 week"
+ExpiresByType image/gif "access plus 1 week"
+ExpiresByType image/png "access plus 1 week"
+ExpiresByType image/jpeg "access plus 1 week"
+ExpiresByType image/x-icon "access plus 1 months"
+ExpiresByType application/x-javascript "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 week"
+ExpiresByType text/javascript "access plus 1 week"
+ExpiresByType application/x-icon "access plus 1 months"
+</IfModule>
+# FIN EXPIRAR CACHE

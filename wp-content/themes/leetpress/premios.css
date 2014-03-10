@@ -1,0 +1,176 @@
+*::selection {
+   background: #FFA800;
+   color: #000;
+   text-decoration:none;
+}
+*::-moz-selection{
+   background: #FFA800;
+   color: #000;
+}
+
+body{background:url(images/premios/fondo.png); }
+
+a{color:#ff9000; text-decoration:none; }
+a:hover{text-decoration:none; color: #914d0a;   }
+#header-wrapper{ background:url(images/premios/header-bgp.png) repeat-x; background-color: #ffc000;}
+			
+@font-face {
+    font-family: 'DINWeb-Medium';
+    src: url('fonts/DINWeb-Medium.eot');
+    src: url('fonts/DINWeb-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+#main-wrap{padding-top: 0;}
+.width{width:100%;}
+#search { background:url(images/premios/search-bg-premios.png) no-repeat; }
+
+#main-content{width: 924px; background:#FFFFFF;}
+#txt{margin: 10px auto ; font-size: 16px; width: 90%;}
+
+#txt:first-letter{
+	font-size: 22px;
+	font-weight:bold;
+}
+#logo{  margin: 0 auto;    
+		width: 300px;
+		position: relative;
+	}
+
+
+#comparte{background-color:#D2D2D2; }
+#btncategorias{margin: 0 auto; width: 90%;}
+
+#logo-cole{float: left; margin-right: 20px;}
+#compartir iframe{width: 70px; }
+
+#compartir{
+	
+	background-color: #D2D2D2;
+	overflow: auto;
+	margin-bottom: 10px;
+  
+}
+#compartir img {  margin:  15px 0 10px 20px;}
+#botones{float: right;   margin-right: 10%;    padding-top: 16px;}
+#botones iframe{	min-width: 70px;}
+
+.btn,.mj{
+	background-color: #626262;
+	float: left;
+	width: 256px;
+	height: 50px;
+	margin: 15px; 
+	color: #fff;
+	font-size: 15px;
+	text-align: center;	
+	font-family: 'DINWeb-Medium';
+
+}
+.btn a,.mj a,.btn a:hover,.mj a:hover{
+
+	color: #ffF;
+	text-decoration:none;
+
+}
+.btn a,.mj a{
+	 display: block; 
+	 padding: 15px 0 0 0;
+	 width: 100%;
+	  height: 35px;
+	  text-decoration:none;
+
+
+}
+.fb-share-button iframe{
+	margin-top: -7px;
+	margin-right: 5px;
+	margin-left: 3px;
+}
+.mj{
+	margin-left: 46px;
+    width: 90%;	
+	height: 50px;
+	font-size: 20px;
+
+
+}
+
+#chat{
+
+overflow: auto;
+
+}
+
+#twitter,#chat iframe{
+
+	float: left;
+	width: 460px;
+	height: 400px;
+
+}
+
+
+.btn:hover,.mj:hover {background-color:#EFD412;
+		color: #fff;
+		
+ }
+ .btn:active,.mj:active{background-color:#FFA800;
+		color: #000;
+		
+ }
+.btn:nth-child(3n+1){
+		margin-left: 0px;
+		
+	}
+	.btn:nth-child(3n){
+		margin-right: 0px;
+		
+	}
+
+#post,#news-wrapper{width: 65%; margin: 0 auto;}
+
+
+	@media screen and (max-width:960px){
+		
+
+				#logo{
+
+					top: 0px;
+
+				}
+
+		.btn{
+
+			width: 100%;
+		}
+
+
+
+		#compartir {  
+		    float: left;}
+
+
+		.mj{margin-left: 30px;}
+		#post,#news-wrapper{width: 90%; margin: 0 auto;}
+		.btn:nth-child(3n+1){
+				margin-left: 15px;
+				
+			}
+			.btn:nth-child(3n){
+				margin-right: 15px;
+				
+			}
+
+}
+
+
+
+
+
+
+	
+	

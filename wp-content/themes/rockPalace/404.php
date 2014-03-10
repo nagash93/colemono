@@ -4,7 +4,7 @@
 	<div class="pagewrap">
 		<div class="pagecontent">
 			<div class="pagecontentContent">
-				<h1><?php if (!function_exists('icl_object_id') or (ICL_LANGUAGE_CODE == $sitepress->get_default_language()) ) { echo stripText($data['errorpagetitle']); } else {  _e('W P L O C K E R . CO M - OOOPS! 404','wp-rockPalace'); } ?></h1>
+				<h1><?php if (!function_exists('icl_object_id') or (ICL_LANGUAGE_CODE == $sitepress->get_default_language()) ) { echo stripText($data['errorpagetitle']); } else {  _e('OOOPS! 404','wp-rockPalace'); } ?></h1>
 				<p><?php the_breadcrumb(); ?> 404</p>
 			</div>
 			<div class="homeIcon"><a href="<?php echo home_url(); ?>"></a></div>
